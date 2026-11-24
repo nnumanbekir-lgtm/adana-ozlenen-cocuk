@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Özlenen Çocuk Gelişim Akademisi · Seyhan, Adana</title>
+<meta name="description" content="Özlenen Çocuk Gündüz Bakımevi ve Çocuk Kulübü – Sümer Mahallesi, Seyhan / Adana. Denge, keşif ve paylaşım atölyeleri.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Mulish:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#B3202A; --red-d:#8E1820; --gold:#C79A34; --gold-d:#7A5A14;
+  --cream:#FFF8EC; --paper:#FFFDF8; --sand:#F6EBD6;
+  --green:#2E7556; --green-l:#E3F1E9; --plum:#6A3B7C; --plum-l:#F1E8F5;
+  --ink:#2B201C; --muted:#5E504A; --line:#E8DCC6;
+  --r:16px; --r-s:10px;
+  --shadow:0 2px 0 rgba(43,32,28,.06), 0 10px 30px -12px rgba(43,32,28,.18);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 Mulish,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--gold);color:#fff}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+input,textarea,select{caret-color:var(--red)}
+[hidden]{display:none!important}
+.ph{background:#ffe15a;color:var(--ink);padding:0 .25em;border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+h1,h2,h3{font-family:"Baloo 2",system-ui,sans-serif;line-height:1.12;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(30px,4.2vw,44px);margin-top:.2em;margin-bottom:.35em}
+h3{font-size:23px}
+p{margin:0 0 1em}
+a{color:var(--red-d)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.measure{max-width:64ch}
+section{padding:96px 0 64px}
+
+/* preview bar */
+.preview{background:var(--ink);color:#fff;font-size:14px;text-align:center;padding:10px 16px;line-height:1.45}
+.preview b{color:#ffe15a}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:rgba(255,253,248,.94);border-bottom:1px solid var(--line);backdrop-filter:saturate(1.2)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.brand b{font:700 20px/1 "Baloo 2",system-ui,sans-serif;display:block}
+.brand small{font-size:12px;color:var(--muted);letter-spacing:.02em}
+.navlinks{display:flex;gap:4px}
+.navlinks a{color:var(--ink);text-decoration:none;font-weight:700;font-size:15px;padding:12px 12px;border-radius:999px;transition:background .15s}
+.navlinks a:hover{background:var(--sand)}
+@media (max-width:860px){.navlinks{display:none}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;font:800 16px/1 Mulish,system-ui,sans-serif;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .12s, background .15s, box-shadow .15s}
+.btn:active{transform:translateY(1px) scale(.98)}
+.btn-p{background:var(--red);color:#fff;box-shadow:0 4px 0 var(--red-d)}
+.btn-p:hover{background:#C2242F}
+.btn-p:active{box-shadow:0 2px 0 var(--red-d)}
+.btn-s{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn-s:hover{background:var(--ink);color:#fff}
+.nav .btn{min-height:44px;padding:0 18px;font-size:15px}
+
+/* hero */
+.hero{padding:64px 0 72px;background:
+  radial-gradient(600px 300px at 90% 10%, #FBE9C8 0, transparent 70%), var(--cream)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(40px,6vw,68px);font-weight:800}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero .lead{font-size:19px;color:var(--muted);margin:18px 0 26px;max-width:52ch}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px}
+.facts{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:28px;font-size:15px;color:var(--muted)}
+.facts span{display:inline-flex;align-items:center;gap:8px}
+.facts svg{flex:none}
+.logo-card{justify-self:center;width:min(380px,100%);aspect-ratio:1;border-radius:50%;background:#fff;box-shadow:var(--shadow);display:grid;place-items:center;position:relative}
+.logo-card::before{content:"";position:absolute;inset:12px;border-radius:50%;border:3px solid var(--gold)}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.logo-card{width:240px;order:-1}}
+
+/* beam interaction */
+.beam-sec{background:var(--paper)}
+.beam-box{margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:28px 24px 24px}
+.beam-stage{position:relative;height:230px;margin:0 6px}
+.beam-plank{position:absolute;left:0;right:0;bottom:40px;height:16px;border-radius:999px;background:linear-gradient(#D9A750,#B88A33);box-shadow:inset 0 -3px 0 rgba(0,0,0,.12)}
+.beam-leg{position:absolute;bottom:0;width:12px;height:42px;background:#8C6A2A;border-radius:3px}
+.station{position:absolute;bottom:168px;transform:translateX(-50%);width:44px;height:44px;border-radius:50%;display:grid;place-items:center;border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.15);transition:transform .2s}
+.station.on{transform:translateX(-50%) scale(1.18)}
+.kid{position:absolute;bottom:52px;width:64px;transform:translateX(-50%);transition:left .08s linear}
+.kid .arms{transform-origin:32px 40px;transition:transform .25s}
+.beam-range{width:100%;margin:12px 0 4px;appearance:none;-webkit-appearance:none;height:44px;background:transparent;cursor:grab;border:0;padding:0;min-height:44px;box-shadow:none}
+.beam-range::-webkit-slider-runnable-track{height:8px;background:var(--sand);border-radius:999px}
+.beam-range::-moz-range-track{height:8px;background:var(--sand);border-radius:999px}
+.beam-range::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;margin-top:-11px;border-radius:50%;background:var(--red);border:4px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.25)}
+.beam-range::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:var(--red);border:4px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.25)}
+.beam-hint{font-size:14px;color:var(--muted);text-align:center;margin:0}
+.ws{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;margin-top:22px;padding-top:22px;border-top:1px dashed var(--line)}
+.ws .dot{width:56px;height:56px;border-radius:50%;display:grid;place-items:center}
+.ws ul{margin:.4em 0 0;padding-left:1.1em}
+.ws li{margin:.2em 0}
+
+.beam-range:focus{box-shadow:none;border:0}
+/* film strip */
+.film-sec{background:var(--ink);color:#fff}
+.film-sec h2{color:#fff}
+.film-sec .measure{color:#E8DDD6}
+.strip{display:flex;gap:14px;overflow-x:auto;padding:18px 4px 22px;margin-top:22px;scroll-snap-type:x mandatory;background:#1A1311;border-radius:var(--r-s);
+  background-image:radial-gradient(circle at 50% 50%, #3a2b26 4px, transparent 5px),radial-gradient(circle at 50% 50%, #3a2b26 4px, transparent 5px);
+  background-size:22px 12px;background-position:0 2px,0 calc(100% - 2px);background-repeat:repeat-x}
+.frame{flex:0 0 190px;scroll-snap-align:start;min-height:150px;border-radius:8px;border:2px solid #4A3933;background:#2E2320;color:#fff;text-align:left;padding:14px;cursor:pointer;font:inherit;display:flex;flex-direction:column;justify-content:space-between;transition:border-color .15s, transform .15s}
+.frame:hover{border-color:var(--gold);transform:translateY(-2px)}
+.frame[aria-pressed="true"]{border-color:var(--gold);background:#3B2C27}
+.frame .no{font:700 14px/1 "Baloo 2",system-ui,sans-serif;color:var(--gold)}
+.frame .t{font:700 20px/1.15 "Baloo 2",system-ui,sans-serif}
+.film-panel{margin-top:18px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:24px;align-items:center;background:#2E2320;border-radius:var(--r);padding:22px}
+.vid{aspect-ratio:9/16;max-height:340px;justify-self:center;width:100%;max-width:190px;border-radius:12px;border:2px dashed #6E5A52;display:grid;place-items:center;text-align:center;padding:12px;font-size:14px;color:#CDBFB7}
+.film-panel a{color:#FFD98A}
+@media (max-width:700px){.film-panel{grid-template-columns:1fr}}
+
+/* programs */
+.prog{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink);margin-top:28px}
+.prog > div{padding:24px 22px 8px 0}
+.prog > div + div{padding-left:22px;border-left:1px solid var(--line)}
+.prog .age{font-weight:800;color:var(--red-d);margin:.35em 0 .6em}
+@media (max-width:820px){.prog{grid-template-columns:1fr}.prog > div + div{padding-left:0;border-left:0;border-top:1px solid var(--line)}}
+
+/* trust */
+.trust-sec{background:var(--green-l)}
+.trust{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:26px}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{display:grid;grid-template-columns:40px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid #C9E0D2}
+.tl li:first-child{padding-top:0}
+.tl b{display:block;font-size:18px;margin-bottom:2px}
+.day{background:#fff;border-radius:var(--r);padding:24px;box-shadow:var(--shadow)}
+.day table{width:100%;border-collapse:collapse;font-size:16px}
+.day td{padding:10px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.day td:first-child{width:110px;font-weight:800;color:var(--green)}
+@media (max-width:820px){.trust{grid-template-columns:1fr}}
+
+/* parents */
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:26px;counter-reset:q}
+.three p{font-size:18px}
+.three div{border-top:4px solid var(--gold);padding-top:16px}
+.three div::before{counter-increment:q;content:counter(q);font:800 40px/1 "Baloo 2",system-ui,sans-serif;color:var(--gold)}
+.note{font-size:14px;color:var(--muted)}
+@media (max-width:820px){.three{grid-template-columns:1fr}}
+
+/* faq */
+.faq{margin-top:20px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:18px 44px 18px 0;font:700 19px/1.3 "Baloo 2",system-ui,sans-serif;position:relative;min-height:44px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:6px;top:12px;font:700 28px/1 Mulish,sans-serif;color:var(--red);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq summary:hover{color:var(--red-d)}
+.faq details p{padding:0 0 18px;max-width:68ch}
+
+/* contact */
+.contact-sec{background:var(--cream)}
+.contact{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;margin-top:24px}
+.info dl{margin:0}
+.info dt{font-weight:800;margin-top:16px}
+.info dd{margin:2px 0 0}
+form{background:#fff;border-radius:var(--r);padding:26px;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 1fr;gap:14px 16px}
+form .full{grid-column:1/-1}
+label{font-weight:700;font-size:15px;display:block;margin-bottom:5px}
+input,select,textarea{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1.5px solid #D9CCB5;border-radius:var(--r-s);background:var(--paper);color:var(--ink);min-height:48px}
+input:focus,select:focus,textarea:focus{border-color:var(--red);outline:none;box-shadow:0 0 0 3px rgba(179,32,42,.15)}
+textarea{min-height:96px;resize:vertical}
+.kvkk{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--muted)}
+.kvkk input{width:22px;min-height:22px;height:22px;margin-top:2px;accent-color:var(--red);flex:none}
+.msg{border-radius:var(--r-s);padding:12px 14px;background:var(--green-l);color:var(--green);font-weight:700}
+@media (max-width:820px){.contact{grid-template-columns:1fr}form{grid-template-columns:1fr}}
+
+footer{background:var(--ink);color:#D9CEC7;padding:40px 0;font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:space-between}
+footer a{color:#FFD98A}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="preview"><b>Önizleme.</b> Bu sayfa Özlenen Çocuk Gelişim Akademisi için hazırlanmış taslak bir tasarımdır. Sarı işaretli bilgiler sizin onayınızla güncellenecektir.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Özlenen Çocuk ana sayfa">
+      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#fff" stroke="#C79A34" stroke-width="3"/><path d="M14 30c2-6 1-12 3-18M20 30c0-7 2-11 1-17M26 30c-1-6 2-10 0-15" stroke="#B3202A" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M17 12c2-1 3 0 4 1" stroke="#2E7556" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+      <span><b>Özlenen Çocuk</b><small>Gelişim Akademisi · Seyhan</small></span>
+    </a>
+    <nav class="navlinks" aria-label="Bölümler">
+      <a href="#atolyeler">Atölyeler</a>
+      <a href="#neler-oldu">Neler oldu?</a>
+      <a href="#program">Program</a>
+      <a href="#guven">Güven</a>
+      <a href="#sss">SSS</a>
+    </nav>
+    <a class="btn btn-p" href="#iletisim">Ön kayıt</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Dengede, meraklı ve <em>paylaşan</em> çocuklar için.</h1>
+      <p class="lead">Özlenen Çocuk, Seyhan Sümer Mahallesi'nde gündüz bakımevi ve çocuk kulübü. Denge, keşif ve paylaşım atölyelerinin yanında ebeveyn ve beslenme koçluğuyla aileye de eşlik ediyoruz.</p>
+      <div class="cta">
+        <a class="btn btn-p" href="#iletisim">Ön kayıt formunu doldurun</a>
+        <a class="btn btn-s" href="https://www.google.com/maps/search/?api=1&query=%C3%96zlenen%20%C3%87ocuk%20G%C3%BCnd%C3%BCz%20Bak%C4%B1mevi%20Seyhan%20Adana" target="_blank" rel="noopener">Okulu ziyaret edin</a>
+      </div>
+      <div class="facts">
+        <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E7556" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Hafta içi 07.00–18.30 · Cumartesi 07.00–13.00</span>
+        <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E7556" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Sümer Mah., Seyhan / Adana</span>
+        <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E7556" stroke-width="2" stroke-linecap="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg><span class="ph">Aile ve Sosyal Hizmetler Bakanlığı'na bağlı</span></span>
+      </div>
+    </div>
+    <div class="logo-card" aria-hidden="true">
+      <svg viewBox="0 0 200 200" width="72%">
+        <defs><path id="ta" d="M30 100a70 70 0 0 1 140 0"/><path id="tb" d="M28 104a72 72 0 0 0 144 0"/></defs>
+        <text font-family="Baloo 2" font-weight="800" font-size="21" fill="#B3202A" letter-spacing="2"><textPath href="#ta" startOffset="50%" text-anchor="middle">ÖZLENEN ÇOCUK</textPath></text>
+        <text font-family="Baloo 2" font-weight="800" font-size="15" fill="#B3202A" letter-spacing="1.5"><textPath href="#tb" startOffset="50%" text-anchor="middle" dominant-baseline="hanging">GELİŞİM AKADEMİSİ</textPath></text>
+        <g fill="none" stroke-linecap="round" stroke-width="3">
+          <path d="M78 140c4-18 0-34 6-56" stroke="#B3202A"/><circle cx="85" cy="76" r="5" fill="#B3202A" stroke="none"/>
+          <path d="M96 140c-2-20 6-32 3-58" stroke="#6A3B7C"/><circle cx="100" cy="72" r="5" fill="#6A3B7C" stroke="none"/>
+          <path d="M114 140c-1-16 5-26 2-46" stroke="#2E7556"/><circle cx="117" cy="86" r="5" fill="#2E7556" stroke="none"/>
+          <path d="M130 140c-3-12 3-18 0-30" stroke="#C79A34"/><circle cx="131" cy="102" r="4.5" fill="#C79A34" stroke="none"/>
+          <path d="M70 128c20 6 44 6 70-4" stroke="#2B201C" stroke-width="2"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="beam-sec" id="atolyeler">
+  <div class="wrap">
+    <h2>Denge tahtasında üç durak</h2>
+    <p class="measure">Atölyelerimizin adı çocuğun gelişimini nasıl gördüğümüzü anlatıyor: önce bedenini ve duygularını dengelemek, sonra merak edip keşfetmek, en sonunda öğrendiğini paylaşmak. Çocuğu tahtanın üzerinde yürütün, her durakta ne yaptığımızı görün.</p>
+
+    <div class="beam-box">
+      <div class="beam-stage" id="stage">
+        <div class="beam-plank"></div>
+        <div class="beam-leg" style="left:8%"></div>
+        <div class="beam-leg" style="right:8%"></div>
+        <div class="station" data-i="0" style="left:12%;background:#B3202A" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M4 16h16M12 16V7M8 7h8"/></svg></div>
+        <div class="station" data-i="1" style="left:50%;background:#2E7556" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="5.5"/><path d="M15 15l5 5"/></svg></div>
+        <div class="station" data-i="2" style="left:88%;background:#6A3B7C" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M7 12a3 3 0 1 0 0-.01M17 7a3 3 0 1 0 0-.01M17 17a3 3 0 1 0 0-.01M9.6 10.7l4.8-2.4M9.6 13.3l4.8 2.4"/></svg></div>
+        <svg class="kid" id="kid" viewBox="0 0 64 96" aria-hidden="true">
+          <circle cx="32" cy="16" r="11" fill="#F2C9A0"/>
+          <path d="M22 13c2-8 18-9 21 0-6-3-14-3-21 0z" fill="#5A3A26"/>
+          <circle cx="28" cy="17" r="1.6" fill="#2B201C"/><circle cx="36" cy="17" r="1.6" fill="#2B201C"/>
+          <path d="M28 22c2 2 6 2 8 0" stroke="#2B201C" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+          <path d="M22 30h20l3 30H19z" fill="#B3202A"/>
+          <g class="arms" id="arms"><path d="M4 38L32 40 60 38" stroke="#F2C9A0" stroke-width="6" stroke-linecap="round" fill="none"/></g>
+          <path d="M26 60l-3 30M38 60l3 30" stroke="#2B201C" stroke-width="6" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <label for="beam" class="beam-hint">Kaydırarak yürütün</label>
+      <input id="beam" class="beam-range" type="range" min="0" max="100" value="12" aria-describedby="ws-title">
+
+      <div class="ws" aria-live="polite">
+        <div class="dot" id="ws-dot"></div>
+        <div>
+          <h3 id="ws-title"></h3>
+          <p id="ws-text" style="margin:.3em 0 0"></p>
+          <ul id="ws-list"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="film-sec" id="neler-oldu">
+  <div class="wrap">
+    <h2>EGO'da Neler Oldu?</h2>
+    <p class="measure">Instagram'da bölüm bölüm paylaştığımız dizimiz. Geziler, gösteriler ve törenler; okulda bir haftanın nasıl geçtiğini en iyi bunlar anlatıyor. Bir kareye dokunun.</p>
+    <div class="strip" role="group" aria-label="Bölümler" id="strip"></div>
+    <div class="film-panel">
+      <div class="vid"><span>Bölümün videosu<br>buraya eklenecek<br><span class="ph">(okulun onayıyla)</span></span></div>
+      <div>
+        <p class="no" id="fp-no" style="font:700 16px/1 'Baloo 2';color:var(--gold);margin-bottom:8px"></p>
+        <h3 id="fp-t" style="font-size:30px;margin-bottom:10px"></h3>
+        <p id="fp-d"></p>
+        <p style="margin:0"><a href="https://www.instagram.com/adanaozlenencocuk/" target="_blank" rel="noopener">Tüm bölümler Instagram'da: @adanaozlenencocuk</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="program">
+  <div class="wrap">
+    <h2>Kimler için, neler var?</h2>
+    <p class="measure">Tek çatı altında küçükler için gündüz bakımevi, okul çağındakiler için çocuk kulübü ve aileler için koçluk.</p>
+    <div class="prog">
+      <div>
+        <h3>Gündüz bakımevi</h3>
+        <p class="age"><span class="ph">… – 66 ay</span></p>
+        <p>Tam gün bakım ve okul öncesi eğitim. Denge, keşif ve paylaşım atölyeleri, ilkokula hazırlık, özel günler ve geziler.</p>
+        <p><span class="ph">Sınıf düzeni ve grup büyüklükleri</span></p>
+      </div>
+      <div>
+        <h3>Çocuk kulübü</h3>
+        <p class="age"><span class="ph">İlkokul çağı · okul sonrası</span></p>
+        <p>Okul saatleri dışında atölyeler, kulüp etkinlikleri ve ödev desteği.</p>
+        <p><span class="ph">Kulüp günleri ve saatleri, servis bilgisi</span></p>
+      </div>
+      <div>
+        <h3>Ebeveyn ve çocuk koçluğu</h3>
+        <p class="age">Aileler için</p>
+        <p>Ebeveyn koçluğu, çocuk koçluğu, doğal yaşam ve beslenme koçluğu. Evde ve okulda aynı dili konuşmak için.</p>
+        <p><span class="ph">Görüşme biçimi ve ücreti</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trust-sec" id="guven">
+  <div class="wrap">
+    <h2>İçiniz rahat olsun diye</h2>
+    <p class="measure">Bir veli kreş ararken önce bunları sorar. Cevaplarımızı saklamıyoruz; çoğunu zaten Instagram'da da paylaşıyoruz.</p>
+    <div class="trust">
+      <ul class="tl">
+        <li><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2E7556" stroke-width="1.8" stroke-linecap="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg>
+          <div><b>Denetimlerimizi paylaşıyoruz</b>Bakanlık denetimleri ve mutfak kayıtlarımız Instagram'daki "Denetimler" bölümünde. <span class="ph">Son denetim tarihi</span></div></li>
+        <li><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2E7556" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M16 4.5a3.5 3.5 0 0 1 0 7M18 14c2 .7 3 2.8 3 6"/></svg>
+          <div><b>Kadromuz eğitimini sürdürüyor</b>Öğretmen ve personelimiz düzenli eğitimlere katılıyor. <span class="ph">Öğretmen sayısı, branşlar, ilk yardım sertifikası</span></div></li>
+        <li><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2E7556" stroke-width="1.8" stroke-linecap="round"><path d="M21 4L3 11l6 2 2 6 3-4 5 4z"/></svg>
+          <div><b>Velilerle sürekli iletişim</b>Telegram kanalımızdan günün paylaşımları ve duyurular. <span class="ph">Günlük bilgilendirme nasıl yapılıyor?</span></div></li>
+        <li><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2E7556" stroke-width="1.8" stroke-linecap="round"><path d="M4 21V4M4 4h12l-2 4 2 4H4"/></svg>
+          <div><b>Değerlerimizle büyüyoruz</b>Millî bayramlar, bayrak teslim töreni, kitap önerileri ve dernek çalışmaları.</div></li>
+        <li><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2E7556" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg>
+          <div><b>Bina ve güvenlik</b><span class="ph">Giriş-çıkış kontrolü, kamera, bahçe, çocuğu kimin alabileceği</span></div></li>
+      </ul>
+      <div class="day">
+        <h3 style="margin-bottom:10px">Bir gün nasıl geçer?</h3>
+        <table>
+          <tr><td>07.00</td><td>Kapılar açılır, karşılama</td></tr>
+          <tr><td><span class="ph">08.30</span></td><td><span class="ph">Kahvaltı</span></td></tr>
+          <tr><td><span class="ph">09.30</span></td><td><span class="ph">Atölye: denge, keşif ya da paylaşım</span></td></tr>
+          <tr><td><span class="ph">12.00</span></td><td><span class="ph">Öğle yemeği</span></td></tr>
+          <tr><td><span class="ph">13.00</span></td><td><span class="ph">Uyku ve dinlenme</span></td></tr>
+          <tr><td><span class="ph">15.30</span></td><td><span class="ph">İkindi, bahçe ve serbest oyun</span></td></tr>
+          <tr><td>18.30</td><td>Son teslim</td></tr>
+        </table>
+        <p class="note" style="margin:12px 0 0">Cumartesi 07.00–13.00 arası açığız.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="veliler">
+  <div class="wrap">
+    <h2>Velilerin en çok söylediği üç şey</h2>
+    <div class="three">
+      <div><p>Çocuğunu gönül rahatlığıyla bırakabildiği, huzur ve güven veren bir kurum.</p></div>
+      <div><p>Yenilikçi ve çalışkan bir yönetim; sorulara açık, ulaşılabilir.</p></div>
+      <div><p>Deneyimli ve çocuğa gerçekten ilgi gösteren bir öğretmen kadrosu.</p></div>
+    </div>
+    <p class="note" style="margin-top:22px">Google'daki veli yorumlarından derlenmiştir.</p>
+  </div>
+</section>
+
+<section id="sss" style="padding-top:40px">
+  <div class="wrap">
+    <h2>Sık sorulanlar</h2>
+    <div class="faq">
+      <details><summary>Hangi saatlerde açıksınız?</summary><p>Hafta içi 07.00–18.30, cumartesi 07.00–13.00. Pazar kapalıyız.</p></details>
+      <details><summary>Bakımevi ile anaokulu arasında fark var mı?</summary><p>Gündüz bakımevleri <span class="ph">Aile ve Sosyal Hizmetler Bakanlığı'na</span> bağlıdır; uzun çalışma saatleri ve cumartesi hizmetiyle çalışan aileye uyar. Eğitim programı okul öncesi eğitimle aynı amaçları taşır ve denetlenir.</p></details>
+      <details><summary>Uyum süreci nasıl ilerliyor?</summary><p><span class="ph">İlk günlerde velinin okulda kalma süresi ve uyum haftasının planı</span></p></details>
+      <details><summary>Yemekler nerede hazırlanıyor?</summary><p><span class="ph">Mutfak okulda mı? Menü nasıl paylaşılıyor?</span> Beslenme koçluğumuz sayesinde menüleri ailelerle birlikte düşünüyoruz.</p></details>
+      <details><summary>Servis var mı?</summary><p><span class="ph">Servis bölgeleri ve ücreti</span></p></details>
+      <details><summary>Ücretler ne kadar?</summary><p><span class="ph">Aylık ücret, kayıt dönemi, kardeş indirimi</span> Detaylar için formu doldurun, size yazalım.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact-sec" id="iletisim">
+  <div class="wrap">
+    <h2>Tanışalım</h2>
+    <p class="measure">Formu doldurun; mesajınız WhatsApp'tan bize ulaşır, size yazarak dönelim. Okulu görmek isterseniz bir ziyaret günü belirleriz.</p>
+    <div class="contact">
+      <div class="info">
+        <dl>
+          <dt>Adres</dt><dd>Sümer Mah. 69083 Sok. No:14<br>Seyhan / Adana</dd>
+          <dt>Telefon</dt><dd><a href="tel:+903222276304">0322 227 63 04</a></dd>
+          <dt>WhatsApp</dt><dd><span class="ph">WhatsApp numarası</span></dd>
+          <dt>Instagram</dt><dd><a href="https://www.instagram.com/adanaozlenencocuk/" target="_blank" rel="noopener">@adanaozlenencocuk</a></dd>
+          <dt>Telegram</dt><dd><a href="https://t.me/+qg7SXbQr9zhhMmZk" target="_blank" rel="noopener">Kanalımıza katılın</a></dd>
+          <dt>Çalışma saatleri</dt><dd>Hafta içi 07.00–18.30<br>Cumartesi 07.00–13.00</dd>
+        </dl>
+        <p style="margin-top:20px"><a class="btn btn-s" href="https://www.google.com/maps/search/?api=1&query=%C3%96zlenen%20%C3%87ocuk%20G%C3%BCnd%C3%BCz%20Bak%C4%B1mevi%20Seyhan%20Adana" target="_blank" rel="noopener">Haritada açın</a></p>
+      </div>
+      <form id="form" novalidate>
+        <div><label for="f-veli">Adınız soyadınız</label><input id="f-veli" name="veli" autocomplete="name" required></div>
+        <div><label for="f-tel">Telefonunuz</label><input id="f-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" required></div>
+        <div><label for="f-cocuk">Çocuğunuzun adı</label><input id="f-cocuk" name="cocuk" required></div>
+        <div><label for="f-yas">Yaşı ya da doğum tarihi</label><input id="f-yas" name="yas" required></div>
+        <div class="full"><label for="f-konu">Konu</label>
+          <select id="f-konu" name="konu">
+            <option>Gündüz bakımevi ön kaydı</option>
+            <option>Çocuk kulübü</option>
+            <option>Okul ziyareti</option>
+            <option>Ebeveyn / beslenme koçluğu</option>
+            <option>Diğer</option>
+          </select></div>
+        <div class="full"><label for="f-not">Notunuz</label><textarea id="f-not" name="not" placeholder="Başlangıç tarihi, sorularınız…"></textarea></div>
+        <label class="kvkk full"><input type="checkbox" id="f-kvkk" required> <span>Bilgilerimin ön kayıt ve iletişim amacıyla işlenmesine izin veriyorum. <span class="ph">KVKK aydınlatma metni</span></span></label>
+        <div class="full"><button class="btn btn-p" type="submit">Mesajı WhatsApp'tan gönderin</button></div>
+        <div class="full msg" id="f-msg" hidden></div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b style="color:#fff;font:700 20px 'Baloo 2',sans-serif">Özlenen Çocuk Gelişim Akademisi</b><br>Gündüz Bakımevi ve Çocuk Kulübü · Seyhan / Adana</div>
+    <div><a href="tel:+903222276304">0322 227 63 04</a> · <a href="https://www.instagram.com/adanaozlenencocuk/" target="_blank" rel="noopener">Instagram</a></div>
+  </div>
+</footer>
+
+<script>
+var WHATSAPP=''; // örn. 905xxxxxxxxx
+
+/* denge tahtası */
+var WS=[
+  {t:'Denge',c:'#B3202A',bg:'#FBE7E8',d:'Bedenini tanıyan çocuk kendine güvenir. Hareket, ritim ve duyguları adlandırma çalışmaları.',l:['<span class="ph">Denge tahtası, ip ve parkur oyunları</span>','<span class="ph">Duygu kartları ve nefes oyunları</span>']},
+  {t:'Keşif',c:'#2E7556',bg:'#E3F1E9',d:'Sorusunu kendi bulsun diye: geziler, deneyler ve doğal yaşam.',l:['Kütüphane ve AFAD gezileri','<span class="ph">Doğa, bilim ve mutfak deneyleri</span>']},
+  {t:'Paylaşım',c:'#6A3B7C',bg:'#F1E8F5',d:'Öğrendiğini anlatmak, sırayla oynamak, birlikte kutlamak.',l:['Özel günler, gösteriler ve törenler','<span class="ph">Ailelerle ortak etkinlikler</span>']}
+];
+var beam=document.getElementById('beam'),kid=document.getElementById('kid'),arms=document.getElementById('arms'),
+    st=[].slice.call(document.querySelectorAll('.station')),pos=[12,50,88],cur=-1,last=12;
+function walk(){
+  var v=+beam.value; kid.style.left=v+'%';
+  var tilt=Math.max(-14,Math.min(14,(v-last)*3)); arms.style.transform='rotate('+tilt+'deg)';
+  clearTimeout(walk.t); walk.t=setTimeout(function(){arms.style.transform='rotate(0deg)'},220); last=v;
+  var i=0,b=1e9; pos.forEach(function(p,k){if(Math.abs(p-v)<b){b=Math.abs(p-v);i=k}});
+  if(i!==cur){cur=i;var w=WS[i];
+    st.forEach(function(s,k){s.classList.toggle('on',k===i)});
+    var dot=document.getElementById('ws-dot');dot.style.background=w.bg;dot.innerHTML=st[i].innerHTML.replace('#fff',w.c);
+    document.getElementById('ws-title').textContent=w.t+' atölyesi';
+    document.getElementById('ws-title').style.color=w.c;
+    document.getElementById('ws-text').textContent=w.d;
+    document.getElementById('ws-list').innerHTML=w.l.map(function(x){return'<li>'+x+'</li>'}).join('');
+  }
+}
+beam.addEventListener('input',walk); walk();
+
+/* film şeridi */
+var EP=[
+  {n:'Part 28',t:'Kütüphane gezisi',d:'Kitaplarla dolu bir günde raflar arasında dolaştık. <span class="ph">Hangi kütüphane, hangi yaş grubu?</span>'},
+  {n:'Part 27',t:'Bubble ve kukla show',d:'Dev köpükler ve kuklalarla okulda gösteri günü.'},
+  {n:'Part 26',t:'Bayrak teslim töreni',d:'Okulumuzun en anlamlı törenlerinden biri. <span class="ph">Törenin kısa hikâyesi</span>'},
+  {n:'Part 25',t:'AFAD gezisi',d:'Afet anında ne yapılır? AFAD ekipleriyle tanıştık.'},
+  {n:'4 Nisan',t:'Dünya Sokak Hayvanları Günü',d:'Sokaktaki dostlarımızı ve onlara nasıl iyi davranacağımızı konuştuk.'},
+  {n:'Vol. 2',t:'Bir yılın özeti',d:'Yıl boyunca paylaştığımız bölümlerin hepsi bir arada.'}
+];
+var strip=document.getElementById('strip');
+EP.forEach(function(e,i){var b=document.createElement('button');b.className='frame';b.type='button';
+  b.innerHTML='<span class="no">'+e.n+'</span><span class="t">'+e.t+'</span>';
+  b.addEventListener('click',function(){pick(i)});strip.appendChild(b)});
+function pick(i){[].forEach.call(strip.children,function(b,k){b.setAttribute('aria-pressed',k===i)});
+  document.getElementById('fp-no').textContent="EGO'da Neler Oldu? · "+EP[i].n;
+  document.getElementById('fp-t').textContent=EP[i].t;
+  document.getElementById('fp-d').innerHTML=EP[i].d;}
+pick(0);
+
+/* form */
+document.getElementById('form').addEventListener('submit',function(e){
+  e.preventDefault();var f=this,m=document.getElementById('f-msg');
+  if(!f.checkValidity()){m.hidden=false;m.style.background='#FBE7E8';m.style.color='#8E1820';
+    m.textContent='Lütfen tüm alanları doldurup onay kutusunu işaretleyin.';return}
+  var t='Merhaba, web sitenizden yazıyorum.\nVeli: '+f.veli.value+'\nTelefon: '+f.tel.value+'\nÇocuk: '+f.cocuk.value+' ('+f.yas.value+')\nKonu: '+f.konu.value+(f.not.value?'\nNot: '+f.not.value:'');
+  m.hidden=false;m.style.background='';m.style.color='';
+  if(WHATSAPP){window.open('https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent(t),'_blank');m.textContent='WhatsApp açılıyor…'}
+  else{m.textContent='Önizleme: WhatsApp numarası eklendiğinde bu mesaj doğrudan okula gidecek.'}
+});
+</script>
+</body>
+</html>
